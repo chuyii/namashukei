@@ -1,0 +1,24 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "request": {
+      ".read": "auth !== null",
+      "countdown": {
+        ".read": true
+      }
+    },
+    "answers": {
+      "$user_id": {
+        ".read": "$user_id === auth.uid",
+        ".write": "$user_id === auth.uid && root.child('request').exists()",
+        ".validate": "newData.isNumber()"
+      }
+    },
+    "notices": {
+      "$user_id": {
+        ".read": "$user_id === auth.uid"
+      }
+    }
+  }
+}

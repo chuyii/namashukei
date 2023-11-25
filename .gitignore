@@ -43,3 +43,13 @@ next-env.d.ts
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# firebase
+**/.firebase
+**/.firebaserc
+**/.runtimeconfig.json
+service-account-credentials.json
+**/ui-debug.log
+**/database-debug.log
+**/firebase-debug.log
+**/pubsub-debug.log

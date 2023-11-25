@@ -10,11 +10,13 @@
     "preinstall": "typesync || :",
     "prepare": "simple-git-hooks || :",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "emulator": "firebase emulators:start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
     "@tanstack/react-query": "^5.8.7",
+    "firebase": "^10.6.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
@@ -47,6 +49,7 @@
     "eslint-plugin-n": "^16.3.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-storybook": "^0.6.15",
+    "firebase-admin": "^11.11.1",
     "lint-staged": "^15.1.0",
     "postcss": "^8",
     "prettier": "^3.1.0",
