@@ -3983,6 +3983,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.8.7":
+  version: 5.8.7
+  resolution: "@tanstack/query-core@npm:5.8.7"
+  checksum: 96a2c1434f22919787712456cabc18f62902ab0864a1aa2a81670bcaff768abecd789fbcac8b8d589709e77cd713e1716ae7a0a9b5eeaa991364a4481813ff19
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.8.7":
+  version: 5.8.7
+  resolution: "@tanstack/react-query@npm:5.8.7"
+  dependencies:
+    "@tanstack/query-core": "npm:5.8.7"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: b6729d30a0a5cc195381b79f08d3e4af2f33d5fbf3f6a9b16907a25bf42a66bfa5433f500dc577dfccb75026bd619381f6117f314c83440807b170007d0a8619
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:^9.0.0":
   version: 9.3.3
   resolution: "@testing-library/dom@npm:9.3.3"
@@ -10503,6 +10528,7 @@ __metadata:
     "@storybook/nextjs": "npm:^7.5.3"
     "@storybook/react": "npm:^7.5.3"
     "@storybook/testing-library": "npm:^0.2.2"
+    "@tanstack/react-query": "npm:^5.8.7"
     "@types/eslint": "npm:^8.44.7"
     "@types/eslint-config-prettier": "npm:^6.11.3"
     "@types/lint-staged": "npm:^13.2.2"
