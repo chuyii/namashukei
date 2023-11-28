@@ -26,7 +26,12 @@ export default function UserPage() {
       {__html && <div dangerouslySetInnerHTML={{ __html }}></div>}
       {request ? (
         <>
-          <CountdownCircle className="mx-auto mb-4" timeLeft={timeLeft} />
+          <CountdownCircle
+            className="mx-auto mb-4"
+            timeLeft={timeLeft}
+            width="70px"
+            height="70px"
+          />
           {request.type === 'N' ? (
             <NumericalQuestionForm
               className="mb-8"

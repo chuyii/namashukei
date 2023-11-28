@@ -3,9 +3,13 @@ import { useState, useEffect } from 'react';
 export default function CountdownCircle({
   className,
   timeLeft,
+  width,
+  height,
 }: {
   className?: string;
   timeLeft: number;
+  width?: string;
+  height?: string;
 }) {
   const [isAnimating, setIsAnimating] = useState(false);
   useEffect(() => {
@@ -18,19 +22,25 @@ export default function CountdownCircle({
   }, [timeLeft]);
 
   return (
-    <div className={`relative h-[70px] w-[70px] ${className ?? ''}`}>
-      <svg
+    <svg
+      className={className ?? ''}
+      viewBox="-35 -35 70 70"
+      width={width}
+      height={height}
+    >
+      <circle
         className={`-rotate-90 fill-transparent stroke-black stroke-[4px] ${
           timeLeft && isAnimating ? 'animate-countdown' : ''
         }`}
-        width="70"
-        height="70"
+        r="33"
+      ></circle>
+      <text
+        className="text-3xl font-bold"
+        textAnchor="middle"
+        dominantBaseline="central"
       >
-        <circle cx="35" cy="35" r="32"></circle>
-      </svg>
-      <p className="absolute inset-0 m-auto text-center text-3xl font-bold leading-[70px]">
         {timeLeft}
-      </p>
-    </div>
+      </text>
+    </svg>
   );
 }

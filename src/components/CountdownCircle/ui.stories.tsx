@@ -11,5 +11,5 @@ export default meta;
 type Story = StoryObj<typeof CountdownCircle>;
 
 export const Normal: Story = {
-  args: { timeLeft: 0 },
+  args: { timeLeft: 0, width: '70px', height: '70px' },
 };
