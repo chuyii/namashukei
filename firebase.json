@@ -3,20 +3,14 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "source": ".",
+    "public": "out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "frameworksBackend": {
-      "region": "asia-east1"
-    }
+    "cleanUrls": true
   },
   "emulators": {
     "auth": {
       "host": "0.0.0.0",
       "port": 9099
-    },
-    "functions": {
-      "host": "0.0.0.0",
-      "port": 5001
     },
     "database": {
       "host": "0.0.0.0",
