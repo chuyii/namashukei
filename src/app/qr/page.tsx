@@ -16,11 +16,5 @@ export default function Page() {
     [],
   );
 
-  return (
-    <QRCodeSVG
-      includeMargin={true}
-      className="mx-auto h-full w-full"
-      value={originUrl}
-    />
-  );
+  return <QRCodeSVG className="mx-auto h-full w-full" value={originUrl} />;
 }
