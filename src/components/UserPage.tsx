@@ -13,13 +13,15 @@ import NumericalQuestionForm from '@/components/NumericalQuestionForm';
 
 import CountdownCircle from './CountdownCircle';
 
-export default function UserPage() {
+export default function UserPage({ fallback }: { fallback: JSX.Element }) {
   const { currentUser } = useAuth();
   const __html = useNotice(currentUser.uid);
   const answer = useAnswer(currentUser.uid);
   const { timeLeft, request } = useRequestWithCountdown();
 
   const originUrl = useMemo(() => new URL(window.location.href).origin, []);
+
+  if (__html === null || answer === null || request === null) return fallback;
 
   return (
     <div className="m-8">

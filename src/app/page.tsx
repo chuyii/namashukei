@@ -14,7 +14,7 @@ export default function Page() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider fallback={<Loading />}>
         <div className="mx-auto max-w-sm">
-          <UserPage />
+          <UserPage fallback={<Loading />} />
         </div>
       </AuthProvider>
     </QueryClientProvider>

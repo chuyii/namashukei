@@ -7,7 +7,7 @@ import { db } from '@/lib/firebase';
 import { CountdownPath, FromCountdown } from '@/types';
 
 export function useCountdown() {
-  const [timeLeft, setTimeLeft] = useState(0);
+  const [timeLeft, setTimeLeft] = useState<number | null>(null);
   useEffect(() => {
     let serverTimeOffset = 0;
     const unsubscribe1 = onValue(

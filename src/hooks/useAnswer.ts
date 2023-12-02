@@ -7,7 +7,7 @@ import { db } from '@/lib/firebase';
 import { Answer, AnswerPath } from '@/types';
 
 export const useAnswer = (userId: string) => {
-  const [answer, setAnswer] = useState<Answer | undefined>(undefined);
+  const [answer, setAnswer] = useState<Answer | undefined | null>(null);
   useEffect(() => {
     const unsubscribe = onValue(
       query(ref(db, AnswerPath(userId))),

@@ -8,7 +8,9 @@ import { FromRequest, RequestContent, RequestPath } from '@/types';
 
 export function useRequestWithCountdown() {
   const [timeLeft, setTimeLeft] = useState(0);
-  const [request, setRequest] = useState<RequestContent | undefined>(undefined);
+  const [request, setRequest] = useState<RequestContent | undefined | null>(
+    null,
+  );
   useEffect(() => {
     let serverTimeOffset = 0;
     const unsubscribe1 = onValue(
