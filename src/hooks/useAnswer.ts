@@ -6,7 +6,7 @@ import { db } from '@/lib/firebase';
 
 import { Answer, AnswerPath } from '@/types';
 
-export const useAnswer = (userId: string) => {
+export function useAnswer(userId: string) {
   const [answer, setAnswer] = useState<Answer | undefined | null>(null);
   useEffect(() => {
     const unsubscribe = onValue(
@@ -25,4 +25,4 @@ export const useAnswer = (userId: string) => {
   }, [userId]);
 
   return answer;
-};
+}

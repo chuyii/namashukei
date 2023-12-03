@@ -7,7 +7,7 @@ import { db } from '@/lib/firebase';
 
 import { Notice, NoticePath } from '@/types';
 
-export const useNotice = (userId: string) => {
+export function useNotice(userId: string) {
   const [notice, setNotice] = useState<string | undefined | null>(null);
   useEffect(() => {
     const unsubscribe = onValue(
@@ -26,4 +26,4 @@ export const useNotice = (userId: string) => {
   }, [userId]);
 
   return notice;
-};
+}
